@@ -1,3 +1,22 @@
+<?php
+include 'Mobile_Detect.php';
+$detect = new Mobile_Detect();
+
+// iOS/Android
+$is_ios_android = ($detect->isiOS() || $detect->isAndroidOS());
+ 
+// iOS/Android tablet
+$is_tablet = ($detect->isTablet() && $is_ios_android);
+ 
+// iOS/Android smartphone
+$is_smartphone = ($detect->isMobile() && !$detect->isTablet() && $is_ios_android);
+
+// Krapo-phone
+$is_dumbphone = ($detect->isMobile() && !$detect->isTablet() && !$is_ios_android);
+
+// Desktop
+$is_desktop = (!$is_tablet && !$is_smartphone && !$is_dumbphone);
+?>
 <!doctype html>
 <html lang="cs"> 
 
@@ -8,11 +27,13 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
         
-    <link rel="stylesheet" href="css/index.css">    
+    <link rel="stylesheet" href="css/index.css">  
     
+<?php if (!$is_dumbphone): ?>          
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>    
     <script src="js/modernizr.js"></script>   
     <script src="js/picturefill.js"></script>            
+<?php endif; ?>
     
   </head>
   
@@ -216,9 +237,11 @@
       </div><!-- .foot -->
       
     </div><!-- .container -->
-    
+
+<?php if (!$is_dumbphone): ?>    
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>    
+<?php endif; ?>
     
   </body>
     
