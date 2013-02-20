@@ -69,6 +69,51 @@ video {
   max-width: 100%;
 }
 
+/* Flexibilni media: video, fb like a mapa */
+
+.map {
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 58.8%;
+	margin-bottom: 1.5em;
+}
+
+.map iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.fb-like {
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 10%;
+	margin-bottom: 1.5em;
+	overflow: hidden;
+}
+
+.fb-like iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.video {
+	position: relative;
+	width: 100%;
+	height: 0px;
+	padding-bottom: 75%;
+	margin-bottom: 1.5em;
+}
+
+.video video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
 /* 
 
 --- 2) Helpery --- 
