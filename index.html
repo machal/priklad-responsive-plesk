@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen">
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>    
-    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>        
+    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>   
+    <script src="js/picturefill.js"></script>            
     
   </head>
   
@@ -49,8 +50,7 @@
         
       </div><!-- .head -->
       
-      <div class="content" role="main">
-        
+      <div class="content" role="main">        
         
         <h1>Tajemství Gustáva Husáka: Manželka ho podváděla s hercem!</h1>
         
@@ -60,13 +60,29 @@
         
         <div class="photogallery">
           
-          <p class="photo">
-            <a class="fancybox" href="img/husak_1.jpg"><img src="img/husak_1.jpg" height="200" alt="Gustav Husák"></a>
-          </p>
+          <div class="photo">
+            <a class="fancybox" href="img/husak_1.jpg">
+              <div data-picture data-alt="Gustav Husák">
+                  <div data-src="img/husak_1.jpg"></div>
+                  <div data-src="img/husak_1_lo.jpg" data-media="(max-width: 480px)"></div>
+                  <noscript>
+                      <img src="img/husak_1.jpg" height="200" alt="Gustav Husák">
+                  </noscript>
+              </div>              
+            </a>              
+          </div>
           
-          <p class="photo">
-            <a class="fancybox" href="img/husak_3.jpg"><img src="img/husak_3.jpg" height="200" alt="Gustav Husák"></a>
-          </p>          
+          <div class="photo">
+            <a class="fancybox" href="img/husak_3.jpg">
+              <div data-picture data-alt="Gustav Husák">
+                  <div data-src="img/husak_3.jpg"></div>
+                  <div data-src="img/husak_3_lo.jpg" data-media="(max-width: 480px)"></div>
+                  <noscript>
+                      <img src="img/husak_3.jpg" height="200" alt="Gustav Husák">
+                  </noscript>
+              </div>                            
+            </a>
+          </div>          
           
           <div class="clear"></div>
           
@@ -77,7 +93,13 @@
         <h2>Výdobytky socialismu</h2>
         
         <p>
-            <img src="img/socialismus_1.jpg" width="1254" height="791" alt="Socialistické potraviny" />
+          <div data-picture data-alt="Socialistické potraviny">
+              <div data-src="img/socialismus_1.jpg"></div>
+              <div data-src="img/socialismus_1_lo.jpg" data-media="(max-width: 480px)"></div>
+              <noscript>
+                  <img src="img/socialismus_1.jpg" width="1254" height="791" alt="Socialistické potraviny">
+              </noscript>
+          </div>
         </p>
         
         <p>
@@ -85,7 +107,13 @@
         </p>
         
         <p>
-            <img src="img/socialismus_2.jpg" width="1024" height="725" alt="Škoda 110" />
+          <div data-picture data-alt="Škoda 110">
+              <div data-src="img/socialismus_2.jpg"></div>
+              <div data-src="img/socialismus_2_lo.jpg" data-media="(max-width: 480px)"></div>
+              <noscript>
+                  <img src="img/socialismus_2.jpg" width="1024" height="725" alt="Škoda 110">
+              </noscript>
+          </div>          
         </p>
         
         <p>
@@ -93,7 +121,13 @@
         </p>
         
         <p>
-            <img src="img/socialismus_3.jpg" width="1100" height="435" alt="Jů a Hele" />
+          <div data-picture data-alt="Jů a Hele">
+              <div data-src="img/socialismus_3.jpg"></div>
+              <div data-src="img/socialismus_3_lo.jpg" data-media="(max-width: 480px)"></div>
+              <noscript>
+                  <img src="img/socialismus_3.jpg" width="1100" height="435" alt="Jů a Hele">
+              </noscript>
+          </div>          
         </p>
         
         <p>
