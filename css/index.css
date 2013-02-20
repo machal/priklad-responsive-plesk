@@ -1,0 +1,248 @@
+/*
+	Stylopis pro testovací stránku PLESK.cz
+	---------------------------------------
+
+	1) Zakladni typografie a barvy
+	2) Helpery
+	3) Tisk	
+	4) Vzhled
+	5) Layout
+*/
+
+/* 
+
+--- 1) Zakladna: normalizace, typografie a barvy --- 
+
+*/
+
+body, input, textarea, select {
+  font: 15px/20px Georgia, serif;
+}
+
+p, ul, ol, blockquote, table, iframe {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: .5em;
+  font-family: Arial, sans-serif;
+  line-height: 1.3em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a img {
+  border: 0;
+}
+
+a {
+  color: red;
+}
+
+h1, h2 {
+  color: #999;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+table td,
+table th {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+video {
+  max-width: 100%;
+}
+
+/* 
+
+--- 2) Helpery --- 
+
+*/
+
+.clear {
+  clear: both;
+  font-size: 1px;
+  line-height: 1px;
+  height: 1px;
+}
+
+@media screen {
+  .hide-on-screen {
+    position: absolute;
+    top: -200px;
+  }
+}
+
+/* 
+
+--- 3) Tisk --- 
+
+*/
+
+@media print {
+  .nav {
+    display: none;
+  }
+}
+
+/* 
+
+--- 4) Vzhled --- 
+
+*/
+
+@media screen {
+
+	/* Konstrukcni elementy */
+
+	.content, .side, .logo {
+		padding-top: 3em;
+		padding-bottom: 3em;	
+	}
+
+	/* Navigace */
+
+	.nav {
+	  background: #333;
+	}
+
+	.nav ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	}
+
+	/* Polozka navigace */
+
+	.nav-item {
+	  display: block;
+	  border-bottom: 1px solid #fff;
+	  padding: 1.5em 1em;
+	  text-decoration: none;
+	  text-align: center;
+	  height: 1em;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	}
+
+	b .nav-item,
+	.nav-item:hover,
+	.nav-item:focus,
+	.nav-item:active {
+	  font-weight: normal;
+	  color: #fff;
+	}
+	
+	.nav li:first-child .nav-item {
+	  border-bottom: none;
+	}	
+
+	/* Paticka */
+
+	.foot {
+	  clear: both;
+	  padding: 3em 30px;
+	  background-color: #ccc;
+	  color: #999;
+	}
+
+	.foot p {
+	  margin-bottom: 0;
+	}
+
+	/* Fotogalerie */
+
+	.photogallery {
+	  padding: 1em;
+	  background: #ccc;
+	  margin-bottom: 1.5em;
+	}
+
+	.photogallery .photo {
+	  margin: 0;
+	  width: 50%;
+	  float: left;
+	}
+
+} /* @media screen */ 
+
+/* 
+
+--- 5) Layout --- 
+
+*/
+
+@media only screen {
+
+	body {
+	  background: #ccc;
+	}
+
+	/* Navigace */
+
+	.container {
+	  width: 1000px;
+	  position: relative;
+	  margin: 3em auto;
+	  background: #fff;
+	  -webkit-box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.5);
+	  -moz-box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.5);
+	  box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.5);
+	  color: 0px 0px 1em rgba(0, 0, 0, 0.5);
+	}
+
+	.logo {
+	  padding: 30px;
+	  margin: 0;
+	}
+
+	.content {
+	  float: left;
+	  padding-left: 30px;
+	  padding-right: 30px;	
+	  width: 540px; /* 600px */
+	}
+
+	.side {
+	  float: right;
+	  padding-left: 30px;
+	  padding-right: 30px;
+	  width: 340px; /* 400px */
+	}
+	
+	/* Navigace */
+	
+	.nav li {
+	  width: 250px;
+	  float: left;
+	  margin: 0;
+	  padding: 0;
+	}
+	
+	.nav-item {
+		border-left: 1px solid #fff;
+		border-bottom: none;
+	}
+	
+	.nav li:first-child .nav-item {
+	  border-left: none;
+	}	
+
+} /* @media only screen */
