@@ -150,7 +150,7 @@ video {
 	  color: #fff;
 	}
 	
-	.nav li:first-child .nav-item {
+	.nav li:last-child .nav-item {
 	  border-bottom: none;
 	}	
 
@@ -189,7 +189,7 @@ video {
 
 */
 
-@media only screen {
+@media only screen and (min-width: 768px) {
 
 	body {
 	  background: #ccc;
@@ -198,9 +198,9 @@ video {
 	/* Navigace */
 
 	.container {
-	  width: 1000px;
+	  max-width: 1200px;
 	  position: relative;
-	  margin: 3em auto;
+	  margin: 3em 20px;
 	  background: #fff;
 	  -webkit-box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.5);
 	  -moz-box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.5);
@@ -215,25 +215,28 @@ video {
 
 	.content {
 	  float: left;
-	  padding-left: 30px;
-	  padding-right: 30px;	
-	  width: 540px; /* 600px */
+	  padding-left: 3%;
+	  padding-right: 3%;	
+	  width: 54%; /* 600px */
 	}
 
 	.side {
 	  float: right;
-	  padding-left: 30px;
-	  padding-right: 30px;
-	  width: 340px; /* 400px */
+	  padding-left: 3%;
+	  padding-right: 3%;
+	  width: 34%; /* 400px */
 	}
 	
 	/* Navigace */
 	
 	.nav li {
-	  width: 250px;
+	  width: 25%;
 	  float: left;
 	  margin: 0;
 	  padding: 0;
+	  -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+	     -moz-box-sizing: border-box; /* Firefox 1+ */
+	          box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
 	}
 	
 	.nav-item {
